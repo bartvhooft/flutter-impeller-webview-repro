@@ -8,10 +8,6 @@ WebView renders blurry/low-resolution on devices with ARM Mali-G52 GPUs after Fl
 
 Flutter uses the **Impeller OpenGLES** backend on this device (not Vulkan). Platform view uses SurfaceProducer with legacy composition strategy.
 
-Related issues:
-- [flutter/flutter#177868](https://github.com/flutter/flutter/issues/177868)
-- [flutter/flutter#187419](https://github.com/flutter/flutter/issues/187419)
-
 ## Reproduce
 
 ### Requirements
@@ -59,5 +55,21 @@ Observe: WebView renders correctly.
 ## Flutter doctor
 
 ```
-[paste flutter doctor -v output here]
+[✓] Flutter (Channel stable, 3.44.1, on macOS 26.4.1 25E253 darwin-arm64, locale en-US)
+    • Flutter version 3.44.1 on channel stable at /Users/bart.vanhooft/.asdf/installs/flutter/3.44.1
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 924134a44c (5 days ago), 2026-05-29 12:13:22 -0400
+    • Engine revision c416acfeb8
+    • Dart version 3.12.1
+    • DevTools version 2.57.0
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 35.0.0)
+    • Android SDK at /Users/bart.vanhooft/Library/Android/sdk
+    • Platform android-36, build-tools 35.0.0
+    • Java binary at: /Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 17.0.11+0-17.0.11b1207.24-11852314)
+    • All Android licenses accepted.
+
+[✓] Connected device (3 available)
+    • Kindermann TD 12xx (mobile) • 10.50.0.103:46193 • android-arm64 • Android 14 (API 34)
 ```
