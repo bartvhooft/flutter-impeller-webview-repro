@@ -80,6 +80,20 @@ The two flavors control `EnableImpeller` via `AndroidManifest.xml`:
 | Impeller backend | OpenGLES |
 | Platform view | SurfaceProducer + legacy composition |
 
+## Logs
+
+Key lines captured via `adb logcat` on startup:
+
+```
+D libEGL               : loaded /vendor/lib64/egl/libGLES_mali.so
+I flutter              : [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+I PlatformViewsChannel : Using legacy platform view rendering strategy.
+I PlatformViewsController: Hosting view in view hierarchy for platform view: 0
+I PlatformViewsController: PlatformView is using SurfaceProducer backend
+```
+
+Vulkan layers load (`VK_LAYER_KHRONOS_validation` found) but Flutter never initializes a Vulkan context — goes straight to OpenGLES.
+
 ## Flutter doctor
 
 ```
