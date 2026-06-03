@@ -30,6 +30,17 @@ android {
         versionName = flutter.versionName
     }
 
+    flavorDimensions += "impeller"
+
+    productFlavors {
+        impellerOn {
+            dimension "impeller"
+        }
+        impellerOff {
+            dimension "impeller"
+        }
+    }
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
