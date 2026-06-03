@@ -6,11 +6,15 @@ class InfoOverlay extends StatelessWidget {
     required this.flutterVersion,
     required this.impellerEnabled,
     required this.deviceModel,
+    required this.androidVersion,
+    required this.gpu,
   });
 
   final String flutterVersion;
   final bool impellerEnabled;
   final String deviceModel;
+  final String androidVersion;
+  final String gpu;
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +46,8 @@ class InfoOverlay extends StatelessWidget {
                 ),
               ),
               Text('Device: $deviceModel'),
+              Text('Android: $androidVersion'),
+              Text('GPU: $gpu'),
             ],
           ),
         ),

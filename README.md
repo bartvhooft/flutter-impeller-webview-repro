@@ -26,7 +26,8 @@ Related issues:
 flutter run \
   --flavor impellerOn \
   --dart-define=APP_FLUTTER_VERSION=3.44.1 \
-  --dart-define=IMPELLER_ENABLED=true
+  --dart-define=IMPELLER_ENABLED=true \
+  --dart-define=GPU="ARM Mali-G52"
 ```
 
 Observe: WebView content is blocky/pixelated/low-resolution.
@@ -37,7 +38,8 @@ Observe: WebView content is blocky/pixelated/low-resolution.
 flutter run \
   --flavor impellerOff \
   --dart-define=APP_FLUTTER_VERSION=3.44.1 \
-  --dart-define=IMPELLER_ENABLED=false
+  --dart-define=IMPELLER_ENABLED=false \
+  --dart-define=GPU="ARM Mali-G52"
 ```
 
 Observe: WebView renders correctly.

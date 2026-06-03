@@ -10,6 +10,7 @@ const String _flutterVersion =
     String.fromEnvironment('APP_FLUTTER_VERSION', defaultValue: 'unknown');
 const bool _impellerEnabled =
     bool.fromEnvironment('IMPELLER_ENABLED', defaultValue: true);
+const String _gpu = String.fromEnvironment('GPU', defaultValue: 'unknown');
 
 void main() {
   runApp(const MyApp());
@@ -38,6 +39,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   late final WebViewController _controller;
   String _deviceModel = 'loading...';
+  String _androidVersion = 'loading...';
 
   @override
   void initState() {
@@ -45,19 +47,26 @@ class _HomePageState extends State<HomePage> {
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..loadRequest(Uri.parse('https://flutter.dev'));
-    _loadDeviceModel();
+    _loadDeviceInfo();
   }
 
-  Future<void> _loadDeviceModel() async {
+  Future<void> _loadDeviceInfo() async {
     final info = DeviceInfoPlugin();
     String model;
+    String androidVersion;
     if (Platform.isAndroid) {
       final android = await info.androidInfo;
       model = '${android.manufacturer} ${android.model}';
+      androidVersion =
+          '${android.version.release} (API ${android.version.sdkInt})';
     } else {
       model = 'non-android';
+      androidVersion = 'n/a';
     }
-    setState(() => _deviceModel = model);
+    setState(() {
+      _deviceModel = model;
+      _androidVersion = androidVersion;
+    });
   }
 
   @override
@@ -70,6 +79,8 @@ class _HomePageState extends State<HomePage> {
             flutterVersion: _flutterVersion,
             impellerEnabled: _impellerEnabled,
             deviceModel: _deviceModel,
+            androidVersion: _androidVersion,
+            gpu: _gpu,
           ),
         ],
       ),
