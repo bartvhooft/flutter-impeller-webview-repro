@@ -10,7 +10,6 @@ const String _flutterVersion =
     String.fromEnvironment('APP_FLUTTER_VERSION', defaultValue: 'unknown');
 const bool _impellerEnabled =
     bool.fromEnvironment('IMPELLER_ENABLED', defaultValue: true);
-const String _gpu = String.fromEnvironment('GPU', defaultValue: 'unknown');
 
 void main() {
   runApp(const MyApp());
@@ -80,7 +79,6 @@ class _HomePageState extends State<HomePage> {
             impellerEnabled: _impellerEnabled,
             deviceModel: _deviceModel,
             androidVersion: _androidVersion,
-            gpu: _gpu,
           ),
         ],
       ),
