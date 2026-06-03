@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..loadRequest(Uri.parse('https://www.google.com'));
+      ..loadRequest(Uri.parse('https://flutter.dev'));
     _loadDeviceInfo();
   }
 
