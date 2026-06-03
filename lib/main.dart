@@ -7,7 +7,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 import 'overlay_info.dart';
 
 const String _flutterVersion =
-    String.fromEnvironment('FLUTTER_VERSION', defaultValue: 'unknown');
+    String.fromEnvironment('APP_FLUTTER_VERSION', defaultValue: 'unknown');
 const bool _impellerEnabled =
     bool.fromEnvironment('IMPELLER_ENABLED', defaultValue: true);
 
