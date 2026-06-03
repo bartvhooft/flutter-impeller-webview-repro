@@ -6,8 +6,6 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 import 'overlay_info.dart';
 
-const String _flutterVersion =
-    String.fromEnvironment('APP_FLUTTER_VERSION', defaultValue: 'unknown');
 const bool _impellerEnabled =
     bool.fromEnvironment('IMPELLER_ENABLED', defaultValue: true);
 
@@ -75,7 +73,6 @@ class _HomePageState extends State<HomePage> {
         children: [
           WebViewWidget(controller: _controller),
           InfoOverlay(
-            flutterVersion: _flutterVersion,
             impellerEnabled: _impellerEnabled,
             deviceModel: _deviceModel,
             androidVersion: _androidVersion,

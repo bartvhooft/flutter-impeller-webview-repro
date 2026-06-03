@@ -23,7 +23,6 @@ Flutter uses the **Impeller OpenGLES** backend on this device (not Vulkan). Plat
 ```bash
 flutter run \
   --flavor impellerOn \
-  --dart-define=APP_FLUTTER_VERSION=3.44.1 \
   --dart-define=IMPELLER_ENABLED=true
 ```
 
@@ -34,7 +33,6 @@ Observe: WebView content is blurry/low-resolution on physical screen.
 ```bash
 flutter run \
   --flavor impellerOff \
-  --dart-define=APP_FLUTTER_VERSION=3.44.1 \
   --dart-define=IMPELLER_ENABLED=false
 ```
 

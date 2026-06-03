@@ -3,13 +3,11 @@ import 'package:flutter/material.dart';
 class InfoOverlay extends StatelessWidget {
   const InfoOverlay({
     super.key,
-    required this.flutterVersion,
     required this.impellerEnabled,
     required this.deviceModel,
     required this.androidVersion,
   });
 
-  final String flutterVersion;
   final bool impellerEnabled;
   final String deviceModel;
   final String androidVersion;
@@ -35,7 +33,6 @@ class InfoOverlay extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text('Flutter: $flutterVersion'),
               Text(
                 'Impeller: ${impellerEnabled ? "enabled" : "disabled"}',
                 style: TextStyle(
