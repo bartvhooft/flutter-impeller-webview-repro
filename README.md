@@ -40,7 +40,11 @@ flutter run \
 
 Observe: WebView renders correctly.
 
-> **Note:** Android screenshots partially mask the issue. Physical camera photos of the screen clearly show the difference.
+<img width="4032" height="3024" alt="IMG_2709" src="https://github.com/user-attachments/assets/29eb7f29-3639-47e2-9f38-151577f0e925" />
+<img width="4032" height="3024" alt="IMG_2711" src="https://github.com/user-attachments/assets/8fad2da0-6cc1-4e89-8b2a-b941ae0369db" />
+<img width="1034" height="604" alt="Screenshot 2026-06-03 at 14 14 01" src="https://github.com/user-attachments/assets/41f69084-f8ab-49c2-8211-46dd1af91e16" />
+<img width="1091" height="596" alt="Screenshot 2026-06-03 at 14 14 08" src="https://github.com/user-attachments/assets/60fa8f2f-2351-4717-8fde-397e1e0562eb" />
+
 
 ### How the flavors work
 
