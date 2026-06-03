@@ -42,6 +42,23 @@ Observe: WebView renders correctly.
 
 > **Note:** Android screenshots partially mask the issue. Physical camera photos of the screen clearly show the difference.
 
+### How the flavors work
+
+The two flavors control `EnableImpeller` via `AndroidManifest.xml`:
+
+```xml
+<!-- impellerOn/AndroidManifest.xml -->
+<meta-data
+    android:name="io.flutter.embedding.android.EnableImpeller"
+    android:value="true" />
+
+<!-- impellerOff/AndroidManifest.xml -->
+<meta-data
+    android:name="io.flutter.embedding.android.EnableImpeller"
+    android:value="false"
+    tools:replace="android:value" />
+```
+
 ## Device tested
 
 | Field | Value |
